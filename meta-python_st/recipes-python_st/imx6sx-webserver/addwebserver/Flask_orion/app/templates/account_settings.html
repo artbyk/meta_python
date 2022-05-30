@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% set active_item = 'setting' %}
+
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+        {{ super() }}
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+              <h1 class="page-header">{{ _('Edit Profile') }}</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ wtf.quick_form(form) }}
+                    </div>
+                </div>
+              <p></p>
+              <h2 class="sub-header">{{ _('Change language') }}</h2>
+
+                  <ul class="nav navbar-nav navbar-left">
+
+                      <style>
+                           #li {
+                            margin-right: 1em;
+                            margin-top: 1em;
+                            list-style-type: none;
+                            display: inline;
+                           }
+                      </style>
+                          <li id="li">
+                            <form  name="languages" action="{{ url_for('main.account_settings') }}"method="POST">
+
+                                  <select class="btn btn-default" name="languages">
+
+                                      {% for language in languages %}
+                                      {% if language == active_language %}
+                                        <option type="submit"  value="{{language}}" SELECTED>{{ language }}</option>"
+                                      {% else %}
+                                         <option type="submit"  value="{{language}}">{{ language }}</option>"
+                                      {% endif %}
+                                      {% endfor %}
+                                  </select>
+                                <input class="btn btn-default" type="submit" value="{{ _('Change language') }}">
+                            </form>
+                          </li>
+                  </ul>
+
+
+          </div>
+
+{% endblock %}

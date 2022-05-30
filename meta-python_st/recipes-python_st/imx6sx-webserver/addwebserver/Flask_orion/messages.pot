@@ -1,0 +1,104 @@
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-08-16 08:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page."
+msgstr ""
+
+#: app/auth/forms.py:7 app/main/forms.py:9
+msgid "Username"
+msgstr ""
+
+#: app/auth/forms.py:8 app/main/forms.py:10
+msgid "Password"
+msgstr ""
+
+#: app/auth/forms.py:9
+msgid "Remember me"
+msgstr ""
+
+#: app/auth/forms.py:10 app/auth/routes.py:26 app/templates/auth/login.html:10
+msgid "Sign In"
+msgstr ""
+
+#: app/auth/routes.py:22
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/main/forms.py:11 app/main/forms.py:22
+msgid "Submit"
+msgstr ""
+
+#: app/main/forms.py:18
+msgid "IP"
+msgstr ""
+
+#: app/main/forms.py:19
+msgid "Mask"
+msgstr ""
+
+#: app/main/forms.py:20
+msgid "Gate"
+msgstr ""
+
+#: app/main/forms.py:21
+msgid "IED"
+msgstr ""
+
+#: app/main/routes.py:36
+msgid "Home Page"
+msgstr ""
+
+#: app/main/routes.py:58
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/main/routes.py:68 app/templates/base.html:78
+msgid "Account settings"
+msgstr ""
+
+#: app/templates/account_settings.html:14
+msgid "Edit Profile"
+msgstr ""
+
+#: app/templates/account_settings.html:21
+#: app/templates/account_settings.html:46
+msgid "Change language"
+msgstr ""
+
+#: app/templates/base.html:4
+msgid "- Orion"
+msgstr ""
+
+#: app/templates/base.html:4 app/templates/base.html:47
+msgid "Orion"
+msgstr ""
+
+#: app/templates/base.html:64
+msgid "Overview"
+msgstr ""
+
+#: app/templates/base.html:79
+msgid "Logout"
+msgstr ""
+
+#: app/templates/index.html:13
+msgid "Orion settings"
+msgstr ""
+

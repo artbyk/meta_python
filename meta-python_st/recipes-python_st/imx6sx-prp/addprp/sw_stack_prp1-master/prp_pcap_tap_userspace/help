@@ -1,0 +1,13 @@
+======== SW Stack PRP1 Help ===========================
+    c   -   Print statistic counters    (enable/disable)
+    d   -   Discard list logging        (enable/disable)
+    D   -   Discard consistency check   (enable/disable)
+    e   -   Print environment configuration
+    f   -   Print RX frame content      (enable/disable)
+    q   -   Quit application
+    s   -   Print RX supervision status (enable/disable)
+    t   -   Print RCT                   (enable/disable)
+    v   -   Verbose log                 (enable/disable)
+    x   -   Reset all log settings to default
+    S   -   ifconfig prp1 192.168.2.15
+=======================================================

@@ -1,0 +1,12 @@
+[Unit]
+Description=service to check copper or fiber mode use
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /ksz/sel_copp_fib.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target

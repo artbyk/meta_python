@@ -1,0 +1,12 @@
+[Unit]
+Description=KEPM service to start A9 application
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c "python3 /ksz/sel_copp_fib.py"
+ExecStart=/ksz/sel_copp_fib.py
+StandardOutput=tty
+
+[Install]
+WantedBy=multi-user.target 

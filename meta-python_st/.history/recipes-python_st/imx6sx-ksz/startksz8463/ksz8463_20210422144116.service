@@ -1,0 +1,12 @@
+[Unit]
+Description=KEPM service to start A9 application
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /ksz/sel_copp_fib.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target

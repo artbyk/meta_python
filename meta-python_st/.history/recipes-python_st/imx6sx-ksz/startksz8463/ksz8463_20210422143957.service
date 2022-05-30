@@ -1,0 +1,11 @@
+[Unit]
+Description=KEPM service to start A9 application
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /ksz/sel_copp_fib.py
+StandardOutput=tty
+
+[Install]
+WantedBy=sysinit.target

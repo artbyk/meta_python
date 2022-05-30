@@ -1,0 +1,711 @@
+<ns0:SCL xmlns:ns0="http://www.iec.ch/61850/2003/SCL" xmlns:ns2="http://www.kepm.com/2018/61850" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="B" version="2007" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd http://www.iec.ch/61850/2003/SCLcoordinates  SCL_Coordinates.xsd">
+  <ns0:Header id="ICD File" revision="1.0" version="0" />
+  <ns0:Communication>
+    <ns0:SubNetwork name="W01" type="8-MMS">
+      <ns0:Text>Station bus</ns0:Text>
+      <ns0:BitRate unit="b/s">10</ns0:BitRate>
+      <ns0:ConnectedAP apName="S1" iedName="KALINA_RX">
+        <ns0:Address>
+          <ns0:P type="IP">192.168.2.13</ns0:P>
+          <ns0:P type="IP-SUBNET">255.255.255.0</ns0:P>
+          <ns0:P type="IP-GATEWAY">192.168.2.55</ns0:P>
+          <ns0:P type="OSI-TSEL">0001</ns0:P>
+          <ns0:P type="OSI-PSEL">00000001</ns0:P>
+          <ns0:P type="OSI-SSEL">0001</ns0:P>
+        </ns0:Address>
+      </ns0:ConnectedAP>
+    </ns0:SubNetwork>
+  </ns0:Communication>
+  <ns0:IED name="KALINA_RX">
+  <ns0:Private type="KEPM_GooseSubscription">
+      <ns2:GooseSubscription APPID="9" VLAN-ID="0" VLAN-PRIORITY="4" appId="KALINA" cbName="GOOSEMessage1" confRev="1" datSet="RECCOM" datSetRef="KALINA_RXLD0/LLN0$RECCOM" goCbRef="KALINA_RXLD0/LLN0$GO$GOOSEMessage1" iedName="KALINA_RX" ldInst="LD0" mAddr="01-0c-cd-01-00-01" pubRxStatus="">
+      </ns2:GooseSubscription>
+      <ns2:GooseSubscription APPID="1" VLAN-ID="000" VLAN-PRIORITY="4" appId="AA1J1Q01A2LD0/LLN0.RCB1" cbName="RCB1" confRev="1" datSet="DS1" datSetRef="AA1J1Q01A1LD0/LLN0$DS1" goCbRef="AA1J1Q01A1LD0/LLN0$GO$RCB1" iedName="AA1J1Q01A1" ldInst="LD0" mAddr="01-0C-CD-01-00-06" pubRxStatus="">
+      </ns2:GooseSubscription>
+      <ns2:GooseSubscription APPID="0003" VLAN-ID="003" VLAN-PRIORITY="4" appId="SEL_700G_1" cbName="NewGOOSEMessage" confRev="1" datSet="LEDs" datSetRef="SEL_700G_1CFG/LLN0$LEDs" goCbRef="SEL_700G_1CFG/LLN0$GO$NewGOOSEMessage" iedName="SEL_700G_1" ldInst="CFG" mAddr="01-0C-CD-01-00-03" pubRxStatus="">
+      </ns2:GooseSubscription>
+    </ns0:Private>
+    <ns0:Services>
+      <ns0:DynAssociation />
+      <ns0:SettingGroups>
+        <ns0:SGEdit />
+      </ns0:SettingGroups>
+      <ns0:GetDirectory />
+      <ns0:GetDataObjectDefinition />
+      <ns0:GetDataSetValue />
+      <ns0:DataSetDirectory />
+      <ns0:ReadWrite />
+      <ns0:GetCBValues />
+      <ns0:ConfLNs fixLnInst="true" fixPrefix="true" />
+      <ns0:GOOSE max="10" />
+      <ns0:GSSE max="10" />
+      <ns0:FileHandling />
+      <ns0:GSEDir />
+      <ns0:TimerActivatedControl />
+    </ns0:Services>
+    <ns0:AccessPoint name="S1">
+      <ns0:Server>
+        <ns0:Authentication />
+        <ns0:LDevice inst="LD0">
+          <ns0:LN0 inst="" lnClass="LLN0" lnType="LLN0_Kalina">
+            <ns0:DataSet desc="Commands goose inputs 1-64 status" name="INCOM">
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind9" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind10" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind11" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind12" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind13" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind14" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind15" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind16" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind17" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind18" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind19" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind20" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind21" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind22" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind23" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind24" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind25" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind26" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind27" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind28" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind29" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind30" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind31" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind32" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind33" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind34" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind35" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind36" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind37" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind38" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind39" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind40" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind41" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind42" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind43" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind44" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind45" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind46" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind47" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind48" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind49" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind50" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind51" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind52" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind53" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind54" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind55" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind56" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind57" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind58" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind59" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind60" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind61" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind62" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind63" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind64" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+            </ns0:DataSet>
+
+            <ns0:DataSet desc="Physical inputs 1-64 status" name="INPUT">
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="1" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="2" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="3" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="4" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="5" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="6" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="7" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="Ind8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="8" prefix="TX" />
+            </ns0:DataSet>
+
+            <ns0:DataSet desc="Command transmitting 1-64 status" name="TRANSCOM">
+              <ns0:FCDA daName="stVal" doName="SPCSO1" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO2" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO3" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO4" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO5" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO6" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO7" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO8" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO9" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO10" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO11" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO12" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO13" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO14" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO15" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO16" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO17" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO18" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO19" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO20" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO21" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO22" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO23" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO24" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO25" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO26" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO27" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO28" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO29" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO30" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO31" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO32" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO33" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO34" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO35" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO36" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO37" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO38" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO39" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO40" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO41" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO42" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO43" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO44" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO45" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO46" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO47" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO48" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO49" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO50" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO51" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO52" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO53" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO54" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO55" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO56" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO57" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO58" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO59" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO60" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO61" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO62" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO63" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="stVal" doName="SPCSO64" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+            </ns0:DataSet>
+
+              <ns0:DataSet desc="ModHealthLocRem" name="DeviceStatus">
+              <ns0:FCDA daName="stVal" doName="Mod" fc="ST" ldInst="LD0" lnClass="LLN0" />
+              <ns0:FCDA daName="stVal" doName="Health" fc="ST" ldInst="LD0" lnClass="LLN0" />
+              <ns0:FCDA daName="stVal" doName="LocKey" fc="ST" ldInst="LD0" lnClass="LLN0" />
+              <ns0:FCDA daName="stVal" doName="Sim" fc="ST" ldInst="LD0" lnClass="LPHD" lnInst="1" />
+              <ns0:FCDA daName="stVal" doName="GooseON" fc="ST" ldInst="LD0" lnClass="LPHD" lnInst="1" />
+              <ns0:FCDA daName="stVal" doName="trip" fc="ST" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+            </ns0:DataSet>
+
+            <ns0:DataSet desc="PUI" name="Measurements">
+              <ns0:FCDA daName="mag" doName="AnIn1" fc="MX" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="mag" doName="AnIn2" fc="MX" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+              <ns0:FCDA daName="mag" doName="AnIn3" fc="MX" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="TX" />
+            </ns0:DataSet>
+
+            <ns0:ReportControl bufTime="50" buffered="false" confRev="1" datSet="INCOM" desc="Command input 1-64 status" intgPd="1000" name="ReportINCOM" rptID="Events2">
+              <ns0:TrgOps dchg="true" period="true" qchg="true" />
+              <ns0:OptFields configRef="true" dataSet="true" entryID="true" reasonCode="true" seqNum="true" timeStamp="true" />
+              <ns0:RptEnabled max="1" />
+            </ns0:ReportControl>
+
+            <ns0:ReportControl bufTime="50" buffered="false" confRev="1" datSet="INPUT" desc="Command input 1-64 status" intgPd="1000" name="ReportINPUT" rptID="Events3">
+              <ns0:TrgOps dchg="true" period="true" qchg="true" />
+              <ns0:OptFields configRef="true" dataSet="true" entryID="true" reasonCode="true" seqNum="true" timeStamp="true" />
+              <ns0:RptEnabled max="1" />
+            </ns0:ReportControl>
+
+            <ns0:ReportControl bufTime="50" buffered="false" confRev="1" datSet="DeviceStatus" desc="DeviceStatus" intgPd="1000" name="ReportDS" rptID="Events1">
+              <ns0:TrgOps dchg="true" period="true" qchg="true" />
+              <ns0:OptFields configRef="true" dataSet="true" entryID="true" reasonCode="true" seqNum="true" timeStamp="true" />
+              <ns0:RptEnabled max="1" />
+            </ns0:ReportControl>
+
+            <ns0:ReportControl bufTime="50" buffered="false" confRev="1" datSet="TRANSCOM" desc="Command transmitting 1-64 status" intgPd="1000" name="ReportTRANSCOM" rptID="Events4">
+              <ns0:TrgOps dchg="true" period="true" qchg="true" />
+              <ns0:OptFields configRef="true" dataSet="true" entryID="true" reasonCode="true" seqNum="true" timeStamp="true" />
+              <ns0:RptEnabled max="1" />
+            </ns0:ReportControl>
+
+            <ns0:ReportControl bufTime="50" buffered="false" confRev="1" datSet="Measurements" desc="Measurements" intgPd="1000" name="ReportMeas" rptID="Events5">
+              <ns0:TrgOps dchg="true" period="true" qchg="true" />
+              <ns0:OptFields configRef="true" dataSet="true" entryID="true" reasonCode="true" seqNum="true" timeStamp="true" />
+              <ns0:RptEnabled max="1" />
+            </ns0:ReportControl>
+            <ns0:Inputs>
+              <ns0:ExtRef daName="stVal" doName="SPCSO16" dsPos="45" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="15" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO17" dsPos="48" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="16" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO18" dsPos="51" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="17" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO19" dsPos="54" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="18" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO20" dsPos="57" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="19" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO21" dsPos="60" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="20" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO22" dsPos="63" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="21" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO23" dsPos="66" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="22" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO24" dsPos="69" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="23" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO25" dsPos="72" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="24" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO26" dsPos="75" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="25" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO27" dsPos="78" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="26" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO28" dsPos="81" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="27" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO29" dsPos="84" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="28" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO30" dsPos="87" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="29" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO31" dsPos="90" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="30" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO32" dsPos="93" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="31" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO33" dsPos="96" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="32" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO34" dsPos="99" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="33" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO35" dsPos="102" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="34" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO36" dsPos="105" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="35" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO37" dsPos="108" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="36" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO38" dsPos="111" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="37" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO39" dsPos="114" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="38" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO40" dsPos="117" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="39" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO41" dsPos="120" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="40" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO42" dsPos="123" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="41" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO43" dsPos="126" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="42" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO44" dsPos="129" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="43" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO45" dsPos="132" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="44" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO46" dsPos="135" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="45" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO47" dsPos="138" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="46" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO48" dsPos="141" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="47" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO49" dsPos="144" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="48" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO50" dsPos="147" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="49" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO51" dsPos="150" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="50" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO52" dsPos="153" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="51" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO53" dsPos="156" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="52" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO54" dsPos="159" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="53" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO55" dsPos="162" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="54" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO56" dsPos="165" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="55" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO57" dsPos="168" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="56" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO58" dsPos="171" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="57" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO59" dsPos="174" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="58" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO60" dsPos="177" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="59" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO61" dsPos="180" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="60" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO62" dsPos="183" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="61" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO63" dsPos="186" iedName="KALINA_RX" intAddr="VB001|q=0x1807" intAddrVin="62" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO64" dsPos="189" iedName="KALINA_RX" intAddr="VB002|q=0x1807" intAddrVin="63" ldInst="LD0" lnClass="GGIO" lnInst="9" prefix="" serviceType="GOOSE" srcCBName="GOOSEMessage1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Pos" dsPos="0" iedName="SEL_700G_1" intAddr="VB014" intAddrVin="9" ldInst="PRO" lnClass="XCBR" lnInst="2" prefix="BY" serviceType="GOOSE" srcCBName="NewGOOSEMessage" srcLDInst="CFG" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Pos" dsPos="1" iedName="SEL_700G_1" intAddr="VB013|q=0x1807" intAddrVin="10" ldInst="PRO" lnClass="XCBR" lnInst="2" prefix="BY" serviceType="GOOSE" srcCBName="NewGOOSEMessage" srcLDInst="CFG" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO01" dsPos="2" iedName="SEL_700G_1" intAddr="VB015|q=0x1807" intAddrVin="11" ldInst="CON" lnClass="GGIO" lnInst="9" prefix="RB" serviceType="GOOSE" srcCBName="NewGOOSEMessage" srcLDInst="CFG" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="SPCSO02" dsPos="3" iedName="SEL_700G_1" intAddr="VB016|q=0x1807" intAddrVin="12" ldInst="CON" lnClass="GGIO" lnInst="9" prefix="RB" serviceType="GOOSE" srcCBName="NewGOOSEMessage" srcLDInst="CFG" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Ind1" dsPos="0" iedName="AA1J1Q01A1" intAddr="SPS010.stVal" intAddrVin="0" ldInst="MON" lnClass="GAPC" lnInst="1" prefix="SP16" serviceType="GOOSE" srcCBName="RCB1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Ind1" dsPos="1" iedName="AA1J1Q01A1" intAddr="SPS010.stVal" intAddrVin="1" ldInst="MON" lnClass="GAPC" lnInst="1" prefix="SP16" serviceType="GOOSE" srcCBName="RCB1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Ind1" dsPos="2" iedName="AA1J1Q01A1" intAddr="SPS010.stVal" intAddrVin="2" ldInst="MON" lnClass="GAPC" lnInst="1" prefix="SP16" serviceType="GOOSE" srcCBName="RCB1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Ind1" dsPos="3" iedName="AA1J1Q01A1" intAddr="SPS010.stVal" intAddrVin="3" ldInst="MON" lnClass="GAPC" lnInst="1" prefix="SP16" serviceType="GOOSE" srcCBName="RCB1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              <ns0:ExtRef daName="stVal" doName="Ind1" dsPos="4" iedName="AA1J1Q01A1" intAddr="SPS010.stVal" intAddrVin="4" ldInst="MON" lnClass="GAPC" lnInst="1" prefix="SP16" serviceType="GOOSE" srcCBName="RCB1" srcLDInst="LD0" srcLNClass="LLN0" srcPrefix="" />
+              </ns0:Inputs>
+
+          </ns0:LN0>
+          <ns0:LN inst="1" lnClass="LPHD" lnType="LPHD1" />
+          <ns0:LN inst="1" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="2" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="3" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="4" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="5" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="6" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="7" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="8" lnClass="GGIO" lnType="GGIO2" prefix="TX" />
+          <ns0:LN inst="9" lnClass="GGIO" lnType="GGIO3" prefix="TX" />
+        </ns0:LDevice>
+      </ns0:Server>
+    </ns0:AccessPoint>
+  </ns0:IED>
+  <ns0:DataTypeTemplates>
+    <ns0:LNodeType id="LLN0_Kalina" lnClass="LLN0">
+      <ns0:DO name="Mod" type="modENC_Kalina" />
+      <ns0:DO name="Beh" type="ENS_behaviour_Kalina" />
+      <ns0:DO name="Health" type="ENS_health_Kalina" />
+      <ns0:DO name="NamPlt" type="LPL_LN0_Kalina" />
+      <ns0:DO name="LocKey" type="SPS_1_Proxy" />
+      <ns0:DO name="LEDRs" type="SPC_1_SPCSO1" />
+    </ns0:LNodeType>
+    <ns0:LNodeType id="LPHD1" lnClass="LPHD">
+      <ns0:DO name="PhyNam" type="DPL_1_PhyNam" />
+      <ns0:DO name="PhyHealth" type="ENS_health_Kalina" />
+      <ns0:DO name="Proxy" type="SPS_1_Proxy" />
+      <ns0:DO name="Sim" type="SPS_1_Proxy" />
+      <ns0:DO name="GooseON" type="SPS_1_Proxy" />
+    </ns0:LNodeType>
+    <ns0:LNodeType id="GGIO2" lnClass="GGIO">
+      <ns0:DO name="Mod" type="SPS_1_Proxy" />
+      <ns0:DO name="Beh" type="ENS_behaviour_Kalina" />
+      <ns0:DO name="Health" type="ENS_health_Kalina" />
+      <ns0:DO name="Ind1" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind2" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind3" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind4" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind5" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind6" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind7" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind8" type="SPS_1_Proxy" />
+    </ns0:LNodeType>
+    <ns0:LNodeType id="GGIO3" lnClass="GGIO">
+      <ns0:DO name="Mod" type="SPS_1_Proxy" />
+      <ns0:DO name="Beh" type="ENS_behaviour_Kalina" />
+      <ns0:DO desc="Power" name="AnIn1" type="MV_1_AnIn1" />
+      <ns0:DO desc="Voltage" name="AnIn2" type="MV_1_AnIn1" />
+      <ns0:DO desc="Current" name="AnIn3" type="MV_1_AnIn1" />
+      <ns0:DO name="trip" type="SPS_1_Proxy" />
+      <ns0:DO name="SPCSO1" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO2" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO3" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO4" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO5" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO6" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO7" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO8" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO9" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO10" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO11" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO12" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO13" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO14" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO15" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO16" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO17" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO18" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO19" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO20" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO21" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO22" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO23" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO24" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO25" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO26" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO27" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO28" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO29" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO30" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO31" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO32" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO33" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO34" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO35" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO36" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO37" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO38" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO39" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO40" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO41" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO42" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO43" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO44" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO45" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO46" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO47" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO48" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO49" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO50" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO51" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO52" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO53" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO54" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO55" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO56" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO57" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO58" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO59" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO60" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO61" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO62" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO63" type="SPC_1_SPCSO1" />
+      <ns0:DO name="SPCSO64" type="SPC_1_SPCSO1" />
+      <ns0:DO name="Ind1" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind2" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind3" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind4" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind5" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind6" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind7" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind8" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind9" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind10" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind11" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind12" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind13" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind14" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind15" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind16" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind17" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind18" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind19" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind20" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind21" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind22" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind23" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind24" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind25" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind26" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind27" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind28" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind29" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind30" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind31" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind32" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind33" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind34" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind35" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind36" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind37" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind38" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind39" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind40" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind41" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind42" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind43" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind44" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind45" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind46" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind47" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind48" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind49" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind50" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind51" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind52" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind53" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind54" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind55" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind56" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind57" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind58" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind59" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind60" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind61" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind62" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind63" type="SPS_1_Proxy" />
+      <ns0:DO name="Ind64" type="SPS_1_Proxy" />
+    </ns0:LNodeType>
+    <ns0:DOType cdc="ENC" id="modENC_Kalina">
+      <ns0:DA bType="Struct" fc="CO" name="Oper" type="tcOper_Mod_OnTestBlock" />
+      <ns0:DA bType="Enum" dchg="true" fc="ST" name="stVal" type="OnTestBlockOff" />
+      <ns0:DA bType="Quality" fc="ST" name="q" qchg="true" />
+      <ns0:DA bType="Timestamp" fc="ST" name="t" />
+      <ns0:DA bType="Enum" fc="CF" name="ctlModel" type="StatusDirect" valKind="RO">
+        <ns0:Val>direct-with-normal-security</ns0:Val>
+      </ns0:DA>
+    </ns0:DOType>
+    <ns0:DOType cdc="ENS" id="ENS_behaviour_Kalina">
+      <ns0:DA bType="Enum" dchg="true" fc="ST" name="stVal" type="Beh" />
+      <ns0:DA bType="Quality" fc="ST" name="q" qchg="true" />
+      <ns0:DA bType="Timestamp" fc="ST" name="t" />
+    </ns0:DOType>
+    <ns0:DOType cdc="ENS" id="ENS_health_Kalina">
+      <ns0:DA bType="Enum" dchg="true" fc="ST" name="stVal" type="Health" />
+      <ns0:DA bType="Quality" fc="ST" name="q" qchg="true" />
+      <ns0:DA bType="Timestamp" fc="ST" name="t" />
+    </ns0:DOType>
+    <ns0:DOType cdc="LPL" id="LPL_LN0_Kalina">
+      <ns0:DA bType="VisString255" fc="DC" name="vendor">
+        <ns0:Val>KEPM Ltd.</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="DC" name="swRev">
+        <ns0:Val>KEPM-ORION-APK-V1</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="DC" name="d" />
+      <ns0:DA bType="VisString255" fc="DC" name="configRev">
+        <ns0:Val>1</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="EX" name="ldNs">
+        <ns0:Val>IEC 61850-7-4:2010</ns0:Val>
+      </ns0:DA>
+    </ns0:DOType>
+    <ns0:DOType cdc="DPL" id="DPL_1_PhyNam">
+      <ns0:DA bType="VisString255" fc="DC" name="vendor">
+        <ns0:Val>KEPM Ltd.</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="DC" name="swRev">
+        <ns0:Val>KEPM-ORION-APK-V1</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="DC" name="hwRev">
+        <ns0:Val>KEPM-13-XX</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="DC" name="model">
+        <ns0:Val>ORION Tx</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="VisString255" fc="DC" name="serNum">
+        <ns0:Val>1111111</ns0:Val>
+      </ns0:DA>
+    </ns0:DOType>
+    <ns0:DOType cdc="SPS" id="SPS_1_Proxy">
+      <ns0:DA bType="BOOLEAN" dchg="true" fc="ST" name="stVal" />
+      <ns0:DA bType="Quality" fc="ST" name="q" qchg="true" />
+      <ns0:DA bType="Timestamp" fc="ST" name="t" />
+    </ns0:DOType>
+    <ns0:DOType cdc="LPL" id="LPL_2_NamPlt">
+      <ns0:DA bType="VisString255" fc="DC" name="vendor" />
+      <ns0:DA bType="VisString255" fc="DC" name="swRev" />
+      <ns0:DA bType="VisString255" fc="DC" name="d" />
+    </ns0:DOType>
+    <ns0:DOType cdc="MV" id="MV_1_AnIn1">
+      <ns0:DA bType="Struct" dchg="true" fc="MX" name="mag" type="AnalogueValue_1" />
+      <ns0:DA bType="Quality" fc="MX" name="q" qchg="true" />
+      <ns0:DA bType="Timestamp" fc="MX" name="t" />
+    </ns0:DOType>
+    <ns0:DOType cdc="SPC" id="SPC_1_SPCSO1">
+      <ns0:DA bType="Struct" fc="CO" name="Oper" type="Indperate_1" />
+      <ns0:DA bType="BOOLEAN" dchg="true" fc="ST" name="stVal" />
+      <ns0:DA bType="Quality" fc="ST" name="q" qchg="true" />
+      <ns0:DA bType="Timestamp" fc="ST" name="t" />
+      <ns0:DA bType="Enum" fc="CF" name="ctlModel" type="ctlModel">
+        <ns0:Val>direct-with-normal-security</ns0:Val>
+      </ns0:DA>
+      <ns0:DA bType="Struct" fc="CF" name="pulseConfig" type="PulseConfig" />
+    </ns0:DOType>
+    <ns0:DAType id="PulseConfig">
+      <ns0:BDA bType="Enum" name="cmdQual" type="ControlOutputKind" />
+      <ns0:BDA bType="INT32U" name="onDur" />
+      <ns0:BDA bType="INT32U" name="offDur" />
+      <ns0:BDA bType="INT32U" name="numPls" />
+    </ns0:DAType>
+    <ns0:DAType id="Indperate_1">
+      <ns0:BDA bType="BOOLEAN" name="ctlVal" />
+      <ns0:BDA bType="Struct" name="origin" type="Originator" />
+      <ns0:BDA bType="INT8U" name="ctlNum" />
+      <ns0:BDA bType="Timestamp" name="T" />
+      <ns0:BDA bType="BOOLEAN" name="Test" />
+      <ns0:BDA bType="Check" name="Check" />
+    </ns0:DAType>
+    <ns0:DAType id="tcOper_Mod_OnTestBlock">
+      <ns0:BDA bType="Enum" name="ctlVal" type="OnTestBlockOff" />
+      <ns0:BDA bType="Struct" name="origin" type="Originator" />
+      <ns0:BDA bType="INT8U" name="ctlNum" />
+      <ns0:BDA bType="Timestamp" name="T" />
+      <ns0:BDA bType="BOOLEAN" name="Test" />
+      <ns0:BDA bType="Check" name="Check" />
+      <ns0:ProtNs>IEC 61850-8-1:2003</ns0:ProtNs>
+    </ns0:DAType>
+    <ns0:DAType id="AnalogueValue_1">
+      <ns0:BDA bType="FLOAT32" name="f" />
+    </ns0:DAType>
+    <ns0:DAType id="Originator">
+      <ns0:BDA bType="Enum" name="orCat" type="OrCat" />
+      <ns0:BDA bType="Octet64" name="orIdent" />
+    </ns0:DAType>
+    <ns0:EnumType id="ControlOutputKind">
+      <ns0:EnumVal ord="0">pulse</ns0:EnumVal>
+      <ns0:EnumVal ord="1">persistent</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="OrCat">
+      <ns0:EnumVal ord="0">not-supported</ns0:EnumVal>
+      <ns0:EnumVal ord="1">bay-control</ns0:EnumVal>
+      <ns0:EnumVal ord="2">station-control</ns0:EnumVal>
+      <ns0:EnumVal ord="3">remote-control</ns0:EnumVal>
+      <ns0:EnumVal ord="4">automatic-bay</ns0:EnumVal>
+      <ns0:EnumVal ord="5">automatic-station</ns0:EnumVal>
+      <ns0:EnumVal ord="6">automatic-remote</ns0:EnumVal>
+      <ns0:EnumVal ord="7">maintenance</ns0:EnumVal>
+      <ns0:EnumVal ord="8">process</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="sboClass">
+      <ns0:EnumVal ord="0">operate-once</ns0:EnumVal>
+      <ns0:EnumVal ord="1">operate-many</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="Mod">
+      <ns0:EnumVal ord="1">on</ns0:EnumVal>
+      <ns0:EnumVal ord="2">blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="3">test</ns0:EnumVal>
+      <ns0:EnumVal ord="4">test/blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="5">off</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="OnTestBlockOff">
+      <ns0:EnumVal ord="1">on</ns0:EnumVal>
+      <ns0:EnumVal ord="2">blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="3">test</ns0:EnumVal>
+      <ns0:EnumVal ord="4">test/blocked</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="ctlModel">
+      <ns0:EnumVal ord="0">status-only</ns0:EnumVal>
+      <ns0:EnumVal ord="1">direct-with-normal-security</ns0:EnumVal>
+      <ns0:EnumVal ord="2">sbo-with-normal-security</ns0:EnumVal>
+      <ns0:EnumVal ord="3">direct-with-enhanced-security</ns0:EnumVal>
+      <ns0:EnumVal ord="4">sbo-with-enhanced-security</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="StatusDirect">
+      <ns0:EnumVal ord="0">status-only</ns0:EnumVal>
+      <ns0:EnumVal ord="1">direct-with-normal-security</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="ENS_Behaviour_Kalina">
+      <ns0:EnumVal ord="1">on</ns0:EnumVal>
+      <ns0:EnumVal ord="2">blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="3">test</ns0:EnumVal>
+      <ns0:EnumVal ord="4">test/blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="5">off</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="Beh">
+      <ns0:EnumVal ord="1">on</ns0:EnumVal>
+      <ns0:EnumVal ord="2">blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="3">test</ns0:EnumVal>
+      <ns0:EnumVal ord="4">test/blocked</ns0:EnumVal>
+      <ns0:EnumVal ord="5">off</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="Health">
+      <ns0:EnumVal ord="1">Ok</ns0:EnumVal>
+      <ns0:EnumVal ord="2">Warning</ns0:EnumVal>
+      <ns0:EnumVal ord="3">Alarm</ns0:EnumVal>
+    </ns0:EnumType>
+    <ns0:EnumType id="ENS_health_Kalina">
+      <ns0:EnumVal ord="1">Ok</ns0:EnumVal>
+      <ns0:EnumVal ord="2">Warning</ns0:EnumVal>
+      <ns0:EnumVal ord="3">Alarm</ns0:EnumVal>
+    </ns0:EnumType>
+  </ns0:DataTypeTemplates>
+</ns0:SCL>

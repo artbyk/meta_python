@@ -1,0 +1,12 @@
+[Unit]
+Description=service start prp
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/kepm/prp/PRP.sh
+ExecStop=/kepm/prp/end.sh
+StandardOutput=tty
+
+[Install]
+# WantedBy=sysinit.target
